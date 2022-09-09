@@ -5,7 +5,7 @@ options {
   buildDiscarder (logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '4', numToKeepStr: '5'))
 }
 triggers {
-  pollSCM ('* * * * *')
+ // pollSCM ('* * * * *')
 }
 
 
