@@ -51,11 +51,11 @@ sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@17
 post {
   success {
     slacknotification(currentBuild.result)
-    emailext (body: '', subject: '${env.JOB_NAME} - Build #${env.BUILD_NUMBER} ', to: 'mannemala.rajesh@gmail.com')
+    emailext (body: '', subject: 'declarative job ', to: 'mannemala.rajesh@gmail.com')
   }
   failure {
    slacknotification(currentBuild.result)
-   emailext (body: '', subject: '${env.JOB_NAME} - Build #${env.BUILD_NUMBER}', to: 'mannemala.rajesh@gmail.com')
+   emailext (body: '', subject: 'declarative job', to: 'mannemala.rajesh@gmail.com')
   }
 }
 
