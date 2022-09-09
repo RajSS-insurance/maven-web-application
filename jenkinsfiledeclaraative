@@ -15,8 +15,8 @@ tools {
 
 stages{
 stage('checkoutcode'){
-slacknotification('STARTED')
 steps{
+slacknotification('STARTED')
 git branch: 'development', credentialsId: 'a9cc3627-50e0-48e1-8452-5e74adfcf422', url: 'https://github.com/RajSS-insurance/maven-web-application.git'
 }
 } 
